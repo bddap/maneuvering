@@ -1,0 +1,17 @@
+{
+  "name": "maneuvering",
+  "version": "0.0.0",
+  "description": "multitouch controls for bouncing around in 3d",
+  "main": "index.js",
+  "scripts": {
+    "watch": "beefy test.js:test.js --live --open"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "beefy": "^2.1.6",
+    "browserify": "^13.1.1",
+    "three": "^0.82.1",
+    "three-default": "^1.0.1"
+  }
+}
