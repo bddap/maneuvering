@@ -1,5 +1,6 @@
 const THREE = require('three')
 const init = require('three-default')
+const maneuvering = require('./maneuvering.js')
 
 document.write(`<style>
   html, body {
@@ -28,3 +29,10 @@ scene.add(
       wireframe: true
 })))
 camera.position.z = 2
+
+maneuvering({
+  oneFingerDrag: (x, y) => {
+    camera.position.x -= x / 1000
+    camera.position.y += y / 1000
+  }
+})
