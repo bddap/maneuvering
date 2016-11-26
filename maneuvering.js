@@ -1,9 +1,4 @@
 
-
-function say(a) {
-  console.log(a)
-}
-
 module.exports = function({
   element = document,
   oneFingerBegin = () => undefined,

@@ -35,7 +35,13 @@ camera.position.z = 2
 
 maneuvering({
   oneFingerDrag: (x, y) => {
-    camera.position.x -= x / 1000
-    camera.position.y += y / 1000
+    camera.rotateY(x / 500)
+    camera.rotateX(y / 500)
+  },
+  twoFingerDrag: (x, y, angle, distance) => {
+    const v = new THREE.Vector3( -x / 200, y / 200, - distance / 500)
+    v.applyQuaternion(camera.quaternion)
+    camera.position.add(v)
+    camera.rotateZ(angle)
   }
 })
