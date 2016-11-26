@@ -2,13 +2,16 @@ const THREE = require('three')
 const init = require('three-default')
 const maneuvering = require('./maneuvering.js')
 
-document.write(`<style>
+document.write(`
+<style>
   html, body {
     margin: 0;
     height: 100%;
     overflow: hidden;
   }
-</style>`);
+</style>
+<meta name="viewport" content="width=device-width, user-scalable=no">
+`)
 
 const {
   scene,
